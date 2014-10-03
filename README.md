@@ -1,4 +1,13 @@
 geo-shapes
 ==========
 
-A little about abstract classes and drawings in Java
+Lite om 
+
+- abstrakta klasser
+- gränssnitt
+- inre klasser 
+- muslyssnare
+- git i allmänhet.
+
+
+
