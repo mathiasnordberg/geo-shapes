@@ -1,6 +1,9 @@
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.*;
 
-public class DrawgGUI {
+public class DrawGUI extends JFrame{
 
     private JMenuBar meny;
     private JMenu arkiv;
@@ -8,6 +11,8 @@ public class DrawgGUI {
     private JMenuItem avsluta;
     private JMenuItem omSkaparen;
     private JMenuItem hjalp;
+    
+    private DrawPanel pdraw;
 
 
     public DrawGUI(){
@@ -18,14 +23,9 @@ public class DrawgGUI {
 
     private void initGUI(){
         
-        /*
-        *   Inställningar för JFrame objektet
-        *
-        */
-        this.frameDim = new Dimension(300,200);
         
         this.setTitle("DrawingGUI");
-        this.setSize( (int) frameDim.getWidth(), (int) frameDim.getHeight() );
+        this.setSize(600,600);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
          /*
@@ -60,8 +60,28 @@ public class DrawgGUI {
             }
         });
 	 
+	pdraw = new DrawPanel();
+	add(pdraw);
+	
+	
     }
 
+    
+    private class DrawPanel extends JPanel{
+	
+	public DrawPanel(){
+	    super();
+	}
+	
+	
+	protected void paintComponent( Graphics g){
+	    super.paintComponent(g);
+	    
+	    
+	}
+	
+    }
+    
 
     public static void main(String[] args ) {
         
