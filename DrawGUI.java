@@ -8,7 +8,7 @@ public class DrawgGUI {
         //Följande rader säkrar att GUI:et startar i EDT
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ExampleGUI().setVisible(true);
+                new DrawGUI().setVisible(true);
             }
         });
     }
